@@ -1,21 +1,22 @@
 import React from "react";
 
-const List = ({ todos, delTodo, toggleTodo}) => { 
+const List = ({ notes, delNote }) => {
 
-  return (
-        <ul>
-    { todos.map( (todo, index) => (
-          <li key={index} className={todo.done?"done":""}>
-            <i className={"far fa-2x "+(todo.done?"fa-check-square":"fa-square")}
-      onClick={ () => { toggleTodo(index) }}
-      ></i>
-            <span>{todo.description}</span>
-            <button onClick={ () => { delTodo(index) }}><i className="fas fa-trash fa-2x"></i></button>
-          </li>
-    ) ) }
+      return (
+            <>
+            <p>Notes:</p>
+            <ul>
+                  {notes.map((note, index) => (
+                        <li onClick={() => { delNote(index) }} key={index} className={note.done ? "done" : ""}>
 
-        </ul>
-  )
+                              <pre>{note.description}</pre>
+                        </li>
+                  ))}
+
+            </ul>
+            <p>Cliquez sur une note pour la supprimer...</p>
+            </>
+      )
 }
 
 export default List;

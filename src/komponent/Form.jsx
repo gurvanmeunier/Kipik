@@ -6,7 +6,7 @@ const Form = ({ addNote }) => {
 
   return (
     <form onSubmit={(e) => { e.preventDefault(); addNote(text); setText("") }}>
-      <input type="textarea"
+      <textarea
         placeholder="Ajouter une note"
         onInput={(e) => { setText(e.target.value) }}
         value={text}
