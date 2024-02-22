@@ -7,11 +7,9 @@ const Form = ({ addNote }) => {
   return (
     <form onSubmit={(e) => { e.preventDefault(); addNote(text); setText("") }}>
       <textarea
-        placeholder="Ajouter une note"
+        placeholder="Entrez votre note ici..."
         onInput={(e) => { setText(e.target.value) }}
         value={text}
-        cols="100"
-        raws="100"
         required
       />
       <br />

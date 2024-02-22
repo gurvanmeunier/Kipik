@@ -7,7 +7,7 @@ const List = ({ notes, delNote }) => {
             <p>Notes:</p>
             <ul>
                   {notes.map((note, index) => (
-                        <li onClick={() => { delNote(index) }} key={index} className={note.done ? "done" : ""}>
+                        <li onClick={() => { delNote(index) }} key={index} >
 
                               <pre>{note.description}</pre>
                         </li>

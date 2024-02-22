@@ -32,7 +32,21 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+body {
+  display: flex;
+  max-width: 600px;
+  text-align: center;
+}
+ul {
+  list-style: none;
+}
+h1, li, textarea, button {
+  border: dashed 2px;
+  margin: 2px;
+  padding: 5px;
 }
