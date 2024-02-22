@@ -1,14 +1,14 @@
-# The Docker image that will be used to build your app
 image: node:18
+
 pages:
   script:
     - npm install
     - npm run build
-    - mv build public
   artifacts:
     paths:
-      # The folder that contains the files to be exposed at the Page URL
-      - public
+      - build
+  only:
+    - main
   rules:
     # This ensures that only pushes to the default branch will trigger
     # a pages deploy
