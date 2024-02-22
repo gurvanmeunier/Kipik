@@ -5,15 +5,12 @@ const List = ({ notes, delNote }) => {
       return (
             <>
             <p>Notes:</p>
-            <ul>
                   {notes.map((note, index) => (
-                        <li onClick={() => { delNote(index) }} key={index} >
+                        
 
-                              <pre>{note.description}</pre>
-                        </li>
+                        <pre onClick={() => { delNote(index) }} key={index} >{note.description}</pre>
+                        
                   ))}
-
-            </ul>
             <p>Cliquez sur une note pour la supprimer...</p>
             </>
       )

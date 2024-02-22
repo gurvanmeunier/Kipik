@@ -37,16 +37,36 @@
     transform: rotate(360deg);
   }
 }
-body {
-  display: flex;
+html {
+  margin-left: auto;
+  margin-right: auto;
   max-width: 600px;
   text-align: center;
 }
-ul {
-  list-style: none;
+textarea {
+  width : 95%;
+  /* max-height: 50px; */
+  height: 100px;
 }
-h1, li, textarea, button {
+
+
+body, h1, pre, textarea, button {
   border: dashed 2px;
   margin: 2px;
   padding: 5px;
+}
+pre, p {
+  text-align: left;
+}
+
+button  {
+   animation-duration: .8s;
+   animation-name: clignoter;
+   animation-iteration-count: infinite;
+   transition: none;
+}
+@keyframes clignoter {
+  0%   { opacity:1; }
+  40%   {opacity:0; }
+  100% { opacity:1; }
 }

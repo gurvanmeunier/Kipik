@@ -79,7 +79,7 @@ function App() {
         </div>
       )}
       <h1>KeepPeek</h1>
-
+        <br />
       <Form addNote={addNote} />
       <List notes={notes}
         addNote={addNote}
