@@ -64,6 +64,7 @@ button  {
    animation-name: clignoter;
    animation-iteration-count: infinite;
    transition: none;
+   
 }
 @keyframes clignoter {
   0%   { opacity:1; }
